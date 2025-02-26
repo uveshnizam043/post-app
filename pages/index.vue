@@ -34,8 +34,6 @@ const postsStore = usePostsStore();
 const { posts, loading, error } = storeToRefs(postsStore);
 
 onMounted(async () => {
-  console.log("loading", loading.value);
   await postsStore.fetchPosts();
-  console.log("loading", loading.value);
 });
 </script>

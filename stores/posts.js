@@ -7,7 +7,6 @@ export const usePostsStore = defineStore("posts", {
   }),
   actions: {
     async fetchPosts() {
-      console.log("fetchPosts");
       this.loading = true;
 
       const cachedPosts = sessionStorage.getItem("posts");
