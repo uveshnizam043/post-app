@@ -12,9 +12,14 @@
       </div>
 
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div v-for="post in posts" :key="post.id" class="block">
+        <NuxtLink
+          v-for="post in posts"
+          :key="post.id"
+          :to="`/posts/${post.id}`"
+          class="block"
+        >
           <PostCard :post="post" />
-        </div>
+        </NuxtLink>
       </div>
     </div>
   </main>
